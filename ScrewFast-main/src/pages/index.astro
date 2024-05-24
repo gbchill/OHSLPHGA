@@ -2,18 +2,15 @@
 // Import the necessary components
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
-import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
-import ClientsSection from "@components/sections/landing/ClientsSection.astro";
+
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
-import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/FAQ.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/hero-image.avif";
 import faqs from "@data/faqs.json";
 import features from "@data/features.json";
-import pricing from "@data/pricing.json";
+
 import featureImage from "@images/features-image.avif";
 import construction from "@images/construction-image.avif";
 import tools from "@images/automated-tools.avif";
@@ -28,70 +25,52 @@ const avatarSrcs: Array<string> = [
 ---
 
 <MainLayout>
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Explore ScrewFast on GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
-
   <HeroSection
-    title=`Equip Your Projects with <span
-        class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Top-quality hardware tools and expert construction services for every project need."
+    title=`Welcome to One Heart Siu Lum Pai Hung Gar Arizona<span
+        class="text-red-500 dark:text-red-400"> </span>`
+    subTitle="A 1000 mile journey begins with a single step..."
     primaryBtn="Start Exploring"
     primaryBtnURL="/products"
-    secondaryBtn="Contact Sales Team"
-    secondaryBtnURL="/contact"
-    withReview={true}
-    avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
-    starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
     src={heroImage}
     alt="Stack of ScrewFast product boxes containing assorted hardware tools"
   />
 
-  <ClientsSection
-    title="Trusted by Industry Leaders"
-    subTitle="Experience the reliability chosen by industry giants."
-  />
-
   <FeaturesGeneral
-    title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
+    title="About Us"
+    subTitle="Our school is dedicated to promoting the Lam Family Hung Gar Kung Fu style of traditional Chinese Martial Arts and to bring together a diverse group of people, regardless of race, religion, color, age or sex through hung gar training as well as knowledge of the history and culture from which the Art originated."
     src={featureImage}
     alt="ScrewFast products in floating boxes"
     features={features}
   />
 
   <FeaturesNavs
-    title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
+    title={`Experience the Transformative Power of <span class="text-yellow-500 dark:text-yellow-400">Kung Fu</span>`}
     tabs={[
       {
-        heading: "Cutting-Edge Tools",
+        heading: "Physical Benefits",
         content:
-          "Empower your projects with ScrewFast's cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.",
-        svg: "tools",
-        src: tools,
-        alt: "Yellow and black heavy equipment on brown grass field",
+          "Kung Fu provides the ultimate exercise for all ages. Through proven training techniques and exercises, it increases flexibility, coordination, agility, speed, and stamina. Students experience noticeable improvement in strength and muscle development, leading to a toned and healthy body.",
+        svg: "flexibility",
+        src: construction,
+        alt: "Students practicing Kung Fu exercises",
         first: true,
       },
       {
-        heading: "Intuitive Dashboards",
+        heading: "Mental Benefits",
         content:
-          "Navigate with ease using ScrewFast's intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.",
-        svg: "dashboard",
-        src: dashboard,
-        alt: "A screenshot or graphic representation of the intuitive dashboard",
+          "Kung Fu offers a healthy release for both physical and mental stress. As students progress through various levels and expand their abilities, they gain self-confidence and self-esteem. The concentration, discipline, and confidence acquired from Kung Fu training carry over into all aspects of life, fostering a general feeling of well-being.",
+        svg: "mental",
+        src: construction,
+        alt: "A serene moment of meditation during Kung Fu practice",
         second: true,
       },
       {
-        heading: "Robust Features",
+        heading: "Self-Defense Skills",
         content:
-          "Minimize complexity, maximize productivity. ScrewFast's robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.",
-        svg: "house",
+          "Unlike other forms of exercise, martial arts provides the added benefit of self-defense. Kung Fu equips students with practical self-defense skills, empowering them to protect themselves effectively in various situations.",
+        svg: "self-defense",
         src: construction,
-        alt: "Gray metal building frame near tower crane during daytime",
+        alt: "Instructor demonstrating self-defense techniques",
       },
     ]}
   />
@@ -133,13 +112,5 @@ const avatarSrcs: Array<string> = [
     ]}
   />
 
-  <PricingSection pricing={pricing} />
-
   <FAQ title="Frequently<br />asked questions" faqs={faqs} />
-
-  <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
 </MainLayout>
