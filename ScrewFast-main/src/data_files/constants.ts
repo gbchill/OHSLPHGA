@@ -2,12 +2,13 @@ import ogImageSrc from "@images/social.png";
 
 export const SITE = {
   title: "One Heart Siu Lum Pai Hung Gar Arizona",
-  tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  tagline: "Empowering Your Martial Arts Journey",
+  description: "One Heart Siu Lum Pai Hung Gar Arizona offers top-tier Kung Fu training and expert martial arts instruction to meet all your self-defense and fitness needs. Start exploring and contact our team for superior training and guidance.",
+  description_short: "Top-tier Kung Fu training and expert martial arts instruction to meet all your self-defense and fitness needs.",
+  url: "http://www.hunggaraz.com",
+  author: "George Badulescu",
 };
+
 
 export const SEO = {
   title: SITE.title,
@@ -33,7 +34,8 @@ export const OG = {
   locale: "en_US",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  title: `${SITE.title}: Empowering Your Martial Arts Journey`,
+  description: "Discover the strength and discipline of One Heart Siu Lum Pai Hung Gar Arizona. Our top-tier Kung Fu training and expert martial arts instruction are designed to meet all your self-defense and fitness needs. Join us and start your journey towards mastery.",
   image: ogImageSrc,
 };
+
